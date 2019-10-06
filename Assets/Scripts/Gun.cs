@@ -18,6 +18,6 @@ public class Gun : MonoBehaviour
     {
         audioSource.Play();
 
-        return (cheat && Physics.SphereCast(GunRay, 15f)) || Physics.Raycast(GunRay);
+        return (cheat && Physics.OverlapSphere(transform.position, 30f).Length > 0) || Physics.Raycast(GunRay);
     }
 }

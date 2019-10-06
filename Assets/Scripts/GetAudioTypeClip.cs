@@ -8,7 +8,7 @@ public class GetAudioTypeClip : MonoBehaviour
     private ClipType clipType = ClipType.None;
     [SerializeField]
     private bool playOnStart = false;
-    [SerializeField]
+    //[SerializeField]
     private bool continuousLoad = false;
 
     private AudioDistributor distributor;

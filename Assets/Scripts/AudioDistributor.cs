@@ -26,7 +26,7 @@ public class AudioDistributor : MonoBehaviour
     [Serializable]
     private class ClipGroup
     {
-        [SerializeField]
+        //[SerializeField]
         private AudioClip gunClip = null;
         [SerializeField]
         private AudioClip enemyClip = null;
@@ -34,7 +34,7 @@ public class AudioDistributor : MonoBehaviour
         private AudioClip musicClip = null;
         [SerializeField]
         private Vector2 spawnDelayOverride = Vector2.zero;
-        [SerializeField]
+        //[SerializeField]
         private AudioClip[] distractionClips = new AudioClip[1];
 
         public float RandomSpawnDelayOverride => (spawnDelayOverride == Vector2.zero)
@@ -107,7 +107,7 @@ public class AudioDistributor : MonoBehaviour
             case LevelOfRandomness.PlaySequential:
                 currentGroup++;
                 if(currentGroup >= clipGroups.Length)
-                    currentGroup = 0;
+                    SceneManager.LoadScene(0);
                 break;
             case LevelOfRandomness.RandomizeGroups:
                 currentGroup = Random.Range(0, clipGroups.Length);
@@ -121,5 +121,10 @@ public class AudioDistributor : MonoBehaviour
         {
             FindObjectOfType<SpawnEnemy>().SetSpawnDelay(spawnDelayOverride);
         }
+    }
+
+    public void DecrementGroup()
+    {
+        currentGroup--;
     }
 }

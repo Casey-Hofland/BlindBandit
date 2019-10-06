@@ -28,12 +28,15 @@ public class HandleWinState : MonoBehaviour
         yield return new WaitForSecondsRealtime(suspenseTime);
         Time.timeScale = 1;
 
-        audioSource.clip = (won) ? winClip : loseClip;
-        audioSource.Play();
+        if(!won)
+        {
+            audioSource.clip = loseClip;
+            audioSource.Play();
+            yield return new WaitForSeconds(loseClip.length);
+            AudioDistributor.instance.DecrementGroup();
+        }
 
-        yield return new WaitUntil(() => GetComponent<Input>().controls.Gameplay.Shoot.triggered);
-
-        int buildIndex = (won) ? SceneManager.GetActiveScene().buildIndex : 0;
+        int buildIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(buildIndex);
 
         IsRunning = false;
