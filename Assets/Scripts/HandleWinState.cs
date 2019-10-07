@@ -36,7 +36,9 @@ public class HandleWinState : MonoBehaviour
             AudioDistributor.instance.DecrementGroup();
         }
 
-        int buildIndex = SceneManager.GetActiveScene().buildIndex;
+        int buildIndex = (AudioDistributor.instance.LastGroup()) ?
+            2 :
+            SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(buildIndex);
 
         IsRunning = false;

@@ -107,7 +107,7 @@ public class AudioDistributor : MonoBehaviour
             case LevelOfRandomness.PlaySequential:
                 currentGroup++;
                 if(currentGroup >= clipGroups.Length)
-                    SceneManager.LoadScene(2);
+                    currentGroup = 0;
                 break;
             case LevelOfRandomness.RandomizeGroups:
                 currentGroup = Random.Range(0, clipGroups.Length);
@@ -126,5 +126,10 @@ public class AudioDistributor : MonoBehaviour
     public void DecrementGroup()
     {
         currentGroup--;
+    }
+
+    public bool LastGroup()
+    {
+        return currentGroup >= clipGroups.Length - 1;
     }
 }

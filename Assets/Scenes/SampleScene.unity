@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -294,7 +294,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 0.1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -435,29 +435,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelOfRandomness: 0
   clipGroups:
-  - enemyClip: {fileID: 8300000, guid: 30af11765c4aeda40b2cce3b1524c9c5, type: 3}
-    musicClip: {fileID: 8300000, guid: 613ced824c2ae55468ad7f2e7125a8f6, type: 3}
+  - enemyClip: {fileID: 8300000, guid: 613ced824c2ae55468ad7f2e7125a8f6, type: 3}
+    musicClip: {fileID: 8300000, guid: 30af11765c4aeda40b2cce3b1524c9c5, type: 3}
     spawnDelayOverride: {x: 43, y: 43}
-  - enemyClip: {fileID: 8300000, guid: 0158884be06fc1141bcbaabf52c98c9f, type: 3}
-    musicClip: {fileID: 8300000, guid: 6efde72f48bb4d0468fbb8dd72afd61c, type: 3}
+  - enemyClip: {fileID: 8300000, guid: 6efde72f48bb4d0468fbb8dd72afd61c, type: 3}
+    musicClip: {fileID: 8300000, guid: 0158884be06fc1141bcbaabf52c98c9f, type: 3}
     spawnDelayOverride: {x: 60.5, y: 60.5}
-  - enemyClip: {fileID: 0}
-    musicClip: {fileID: 8300000, guid: f93451381cba6d04c86b8b9826b84d40, type: 3}
+  - enemyClip: {fileID: 8300000, guid: f93451381cba6d04c86b8b9826b84d40, type: 3}
+    musicClip: {fileID: 0}
     spawnDelayOverride: {x: 1, y: 1}
-  - enemyClip: {fileID: 8300000, guid: c85f66dea6d16f3438f809c1bb750915, type: 3}
-    musicClip: {fileID: 8300000, guid: 708018b2d8689e741aa943ebb75f45ec, type: 3}
+  - enemyClip: {fileID: 8300000, guid: 708018b2d8689e741aa943ebb75f45ec, type: 3}
+    musicClip: {fileID: 8300000, guid: c85f66dea6d16f3438f809c1bb750915, type: 3}
     spawnDelayOverride: {x: 10, y: 20}
-  - enemyClip: {fileID: 0}
-    musicClip: {fileID: 8300000, guid: fcbb565a369737947ac03c53e3283c70, type: 3}
+  - enemyClip: {fileID: 8300000, guid: fcbb565a369737947ac03c53e3283c70, type: 3}
+    musicClip: {fileID: 0}
     spawnDelayOverride: {x: 0.1, y: 0.1}
-  - enemyClip: {fileID: 0}
-    musicClip: {fileID: 8300000, guid: 1abc1a02438c1d04cb24d335c2014c8b, type: 3}
+  - enemyClip: {fileID: 8300000, guid: 1abc1a02438c1d04cb24d335c2014c8b, type: 3}
+    musicClip: {fileID: 0}
     spawnDelayOverride: {x: 0.1, y: 0.1}
-  - enemyClip: {fileID: 8300000, guid: 97632b7138d739d449f63f484af31cd7, type: 3}
-    musicClip: {fileID: 8300000, guid: bb9206aae438218499779931e2f2545d, type: 3}
+  - enemyClip: {fileID: 8300000, guid: bb9206aae438218499779931e2f2545d, type: 3}
+    musicClip: {fileID: 8300000, guid: 97632b7138d739d449f63f484af31cd7, type: 3}
     spawnDelayOverride: {x: 30, y: 30}
-  - enemyClip: {fileID: 0}
-    musicClip: {fileID: 8300000, guid: e8247bf4624f04b4693d475ab9dab342, type: 3}
+  - enemyClip: {fileID: 8300000, guid: e8247bf4624f04b4693d475ab9dab342, type: 3}
+    musicClip: {fileID: 0}
     spawnDelayOverride: {x: 3, y: 3}
 --- !u!4 &651077603
 Transform:
