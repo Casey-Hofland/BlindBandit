@@ -5,12 +5,14 @@ public class Input : MonoBehaviour
     public PlayerControls controls { get; private set; }
     private Movement movement;
     private Gun gun;
+    private SpawnEnemy spawnEnemy;
     private HandleWinState handleWinState;
 
     private void Awake()
     {
         movement = GetComponent<Movement>();
         gun = GetComponentInChildren<Gun>();
+        spawnEnemy = GetComponent<SpawnEnemy>();
         handleWinState = GetComponent<HandleWinState>();
 
         // Configure Controls
@@ -19,6 +21,9 @@ public class Input : MonoBehaviour
         {
             foreach(var source in FindObjectsOfType<AudioSource>())
                 source.Stop();
+
+            spawnEnemy.StopAllCoroutines();
+            spawnEnemy.enabled = false;
 
             if (!handleWinState.IsRunning)
                 StartCoroutine(handleWinState.Do(gun.Shoot()));
